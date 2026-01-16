@@ -77,17 +77,14 @@ The notebook provides two testing modes:
 - Batch testing with multiple images
 - Single image upload and classification
 
-## License
-
-[Add appropriate license information if available]
-
-## Contributing
-
-[Add contribution guidelines if applicable]
-
-## Acknowledgments
+## Files
+- `requirements.txt`: Python dependencies for training
+- `sugarcane_classification.ipynb`: Jupyter notebook for data loading, model training, evaluation, and TFLite conversion
+- `sugarcaneDiagnostic.ipynb`: Notebook for testing TFLite inference locally
+- `rasp_diagnostics.py`: Python script for Raspberry Pi deployment with camera
+- `sugarcane_model.tflite`: Converted TensorFlow Lite model for inference
+- `Sugarcane_leafs/`: Dataset directory with subfolders for each class
 
 - Dataset source: Kaggle (akilesh253/sugarcane-plant-diseases-dataset)
 - TensorFlow and Keras for deep learning framework</content>
 
-<parameter name="filePath">c:\Users\joe-an\Downloads\README.md
