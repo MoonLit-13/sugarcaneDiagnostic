@@ -4,7 +4,7 @@ This project implements a lightweight Convolutional Neural Network (CNN) model f
 
 ## Overview
 
-The notebook provides a complete pipeline for:
+The Sugarcane_Health_Diagnostic_ML.ipynb provides a complete pipeline for:
 - Downloading the dataset from Kaggle
 - Data preprocessing and augmentation
 - Building and training a CNN model
@@ -42,7 +42,7 @@ The dataset used is the [Sugarcane Plant Diseases Dataset](https://www.kaggle.co
 
 ## Usage
 
-1. Open the `sugarcane_classification.ipynb` notebook in Jupyter.
+1. Open the [Sugarcane_Health_Diagnostic_ML.ipynb]() notebook in Jupyter.
 
 2. Run the cells in order:
    - Import libraries
@@ -85,6 +85,7 @@ The notebook provides two testing modes:
 - `sugarcane_model.tflite`: Converted TensorFlow Lite model for inference
 - `Sugarcane_leafs/`: Dataset directory with subfolders for each class
 
+---
 - Dataset source: Kaggle (akilesh253/sugarcane-plant-diseases-dataset)
 - TensorFlow and Keras for deep learning framework</content>
 
