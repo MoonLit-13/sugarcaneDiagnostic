@@ -10,6 +10,7 @@ Train a lightweight machine learning model to classify sugarcane leaf images int
 
 Dataset:
 Use the labeled sugarcane leaf dataset from Kaggle. Ensure images are preprocessed:
+- Data set source: https://www.kaggle.com/datasets/akilesh253/sugarcane-plant-diseases-dataset
 - Resize to 224x224 pixels
 - Normalize pixel values (0–1)
 - Apply augmentation (rotation, flip, zoom) for robustness
