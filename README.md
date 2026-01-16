@@ -1,74 +1,93 @@
+# Sugarcane Leaf Disease Classification
 
-Objective:
-Train a lightweight machine learning model to classify sugarcane leaf images into six categories:
-- Healthy
-- Bacterial Blight
-- Mosaic
-- RedRot
-- Rust
-- Yellow
+This project implements a lightweight Convolutional Neural Network (CNN) model for classifying sugarcane leaf images into six disease categories: Healthy, Bacterial Blight, Mosaic, RedRot, Rust, and Yellow.
 
-Dataset:
-Use the labeled sugarcane leaf dataset from Kaggle. Ensure images are preprocessed:
-- Data set source: https://www.kaggle.com/datasets/akilesh253/sugarcane-plant-diseases-dataset
-- Resize to 224x224 pixels
-- Normalize pixel values (0–1)
-- Apply augmentation (rotation, flip, zoom) for robustness
+## Overview
 
-Model Requirements:
-- Lightweight CNN architecture (MobileNetV2 or EfficientNet-lite preferred)
-- Balance between training speed and accuracy
-- Prioritize accuracy over inference speed
-- Train entirely on laptop with 15.6 GB RAM (6.3 GB available)
+The notebook provides a complete pipeline for:
+- Downloading the dataset from Kaggle
+- Data preprocessing and augmentation
+- Building and training a CNN model
+- Model evaluation
+- Converting the model to TensorFlow Lite (TFLite) for deployment
+- Testing inference with the TFLite model
 
-Training Setup:
-- Use Python 3.11.9ironment
-- Framework: TensorFlow/Keras
-- Batch size: 32
-- Epochs: 20–30 with early stopping
-- Optimizer: Adam
-- Loss: categorical crossentropy
-- Metrics: accuracy
+## Dataset
 
-Deployment:
-- Convert trained model to TensorFlow Lite format
-- Apply quantization for smaller size and faster inference
-- Deploy on Raspberry Pi with AI Hat+ and camera sensor module
-- Framework: TensorFlow Lite Runtime (easier setup)
-- Inference pipeline: capture image → preprocess → run model → output diagnosis
+The dataset used is the [Sugarcane Plant Diseases Dataset](https://www.kaggle.com/datasets/akilesh253/sugarcane-plant-diseases-dataset) from Kaggle, containing images of sugarcane leaves categorized into the six classes mentioned above.
 
-Performance Expectations:
-- Real-time inference not required; short delay acceptable
-- Accuracy is priority
+## Requirements
 
-## Environment Setup
+- Python 3.x
+- Jupyter Notebook
+- TensorFlow 2.x
+- Keras
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- OpenDatasets (for Kaggle dataset download)
 
-1. Ensure Python 3.11.9 is installed.
-2. Create a virtual environment: `python -m venv .venv`
-3. Activate the environment: `.venv\Scripts\activate` (Windows)
-4. Install dependencies: `pip install -r requirements.txt`
-5. Launch Jupyter: `jupyter notebook`
-6. Open `sugarcane_classification.ipynb` and run the cells.
+## Installation
 
-## Files
-- `requirements.txt`: Python dependencies for training
-- `sugarcane_classification.ipynb`: Jupyter notebook for data loading, model training, evaluation, and TFLite conversion
-- `sugarcaneDiagnostic.ipynb`: Notebook for testing TFLite inference locally
-- `rasp_diagnostics.py`: Python script for Raspberry Pi deployment with camera
-- `sugarcane_model.tflite`: Converted TensorFlow Lite model for inference
-- `Sugarcane_leafs/`: Dataset directory with subfolders for each class
+1. Install the required packages:
+   ```bash
+   pip install tensorflow numpy pandas matplotlib seaborn scikit-learn opendatasets
+   ```
 
-## Raspberry Pi Deployment
-1. Transfer `sugarcane_model.tflite` and `rasp_diagnostics.py` to Raspberry Pi.
-2. Install dependencies: `pip3 install picamera numpy pillow tflite-runtime`
-3. Enable camera: `sudo raspi-config` → Interfacing Options → Camera → Enable
-4. Run: `python3 rasp_diagnostics.py`
-   - Captures image, preprocesses, runs inference, prints diagnosis.
+2. Set up Kaggle API credentials (if downloading dataset):
+   - Obtain your Kaggle username and API key from your Kaggle account settings.
+   - The notebook will prompt for these during execution.
 
-For AI Hat+ integration, modify the script to use the hat's camera API if different from picamera.
+## Usage
 
-## Files
-- `requirements.txt`: Python dependencies
-- `sugarcane_classification.ipynb`: Main notebook for training and evaluation
-- `Sugarcane_leafs/`: Dataset directory
+1. Open the `sugarcane_classification.ipynb` notebook in Jupyter.
 
+2. Run the cells in order:
+   - Import libraries
+   - Download dataset (requires Kaggle credentials)
+   - Data loading and preprocessing
+   - Model building
+   - Training
+   - Evaluation
+   - Model conversion to TFLite
+   - Testing inference
+
+3. For testing with a pre-trained model:
+   - Skip the training section
+   - Download the pre-trained model as instructed in the notebook
+   - Proceed to the testing sections
+
+## Model Architecture
+
+The model is a lightweight CNN built using Keras, potentially utilizing transfer learning with MobileNetV2 for better performance.
+
+## Evaluation
+
+The notebook includes evaluation metrics such as classification report and confusion matrix to assess model performance.
+
+## Deployment
+
+The trained model is converted to TensorFlow Lite format for efficient deployment on edge devices.
+
+## Testing
+
+The notebook provides two testing modes:
+- Batch testing with multiple images
+- Single image upload and classification
+
+## License
+
+[Add appropriate license information if available]
+
+## Contributing
+
+[Add contribution guidelines if applicable]
+
+## Acknowledgments
+
+- Dataset source: Kaggle (akilesh253/sugarcane-plant-diseases-dataset)
+- TensorFlow and Keras for deep learning framework</content>
+
+<parameter name="filePath">c:\Users\joe-an\Downloads\README.md
