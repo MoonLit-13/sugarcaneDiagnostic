@@ -79,11 +79,10 @@ The notebook provides two testing modes:
 
 ## Files
 - `requirements.txt`: Python dependencies for training
-- `sugarcane_classification.ipynb`: Jupyter notebook for data loading, model training, evaluation, and TFLite conversion
-- `sugarcaneDiagnostic.ipynb`: Notebook for testing TFLite inference locally
+- `Sugarcane_Health_Diagnostic_ML.ipynb`: Jupyter notebook for data loading, model training, evaluation, TFLite conversion and testing TFLite inference
 - `rasp_diagnostics.py`: Python script for Raspberry Pi deployment with camera
 - `sugarcane_model.tflite`: Converted TensorFlow Lite model for inference
-- `Sugarcane_leafs/`: Dataset directory with subfolders for each class
+- `test images/`: Directory of images for testing inference for each class
 
 ---
 - Dataset source: Kaggle (akilesh253/sugarcane-plant-diseases-dataset)
